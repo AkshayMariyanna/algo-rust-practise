@@ -6,9 +6,9 @@
 /// let a = 4;
 /// let n = 3;
 ///
-/// assert_eq!(algebra::geometric_progression::calc(a, n), 84);
+/// assert_eq!(algebra::geometric_progression(a, n), 84);
 /// ```
-pub fn calc(mut a: u64, mut n: u64) -> u64 {
+pub fn geometric_progression(mut a: u64, mut n: u64) -> u64 {
     let mut gp = 0;
 
     let mut gp_2_powers = a;
@@ -33,9 +33,9 @@ pub fn calc(mut a: u64, mut n: u64) -> u64 {
 /// let n = 3;
 /// let m = 17;
 ///
-/// assert_eq!(algebra::geometric_progression::calc_mod(a, n, m), 16);
+/// assert_eq!(algebra::geometric_progression_mod(a, n, m), 16);
 /// ```
-pub fn calc_mod(mut a: u64, mut n: u64, m: u64) -> u64 {
+pub fn geometric_progression_mod(mut a: u64, mut n: u64, m: u64) -> u64 {
     a = a % m;
     let mut gp = 0;
 
