@@ -52,3 +52,29 @@ pub fn gcd_non_recursive(mut a: u64, mut b: u64) -> u64 {
     a
 }
 
+/// GCD(a, b) Extended
+///
+/// Calculates coefficients (x, y) for given (a, b) such that a*x + b*y = GCD(a, b)
+///
+/// [CP - Algos](https://cp-algorithms.com/algebra/extended-euclid-algorithm.html)
+///
+/// Extended Euclidean algorithm
+/// ```
+/// let b = 25;
+/// let a = 10;
+/// let (x, y) = algebra::gcd_extended(a, b);
+/// assert_eq!(x * a + y * b, 5);
+///
+/// let a = 15;
+/// let b = 16;
+/// let (x, y) = algebra::gcd_extended(a, b);
+/// assert_eq!(x * a + y * b, 1);
+/// ```
+pub fn gcd_extended(a: i64, b: i64) -> (i64, i64) {
+    if a == 0 {
+        (0, 1)
+    } else {
+        let (x1, y1) = gcd_extended(b % a, a);
+        (y1 - (b / a) * x1, x1)
+    }
+}
