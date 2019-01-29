@@ -5,10 +5,12 @@
 mod binary_exponentiation;
 mod geometric_progression;
 mod gcd;
+mod linear_diophantine;
 
 pub use binary_exponentiation::*;
 pub use geometric_progression::*;
 pub use gcd::*;
+pub use linear_diophantine::*;
 
 /// LCM(a, b)
 ///
