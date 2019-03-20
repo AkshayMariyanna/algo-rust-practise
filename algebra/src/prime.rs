@@ -7,7 +7,7 @@ use std::cmp;
 /// Returns count of prime numbers less than n
 /// ```
 /// assert_eq!(algebra::count_primes(100), 25);
-/// assert_eq!(algebra::count_primes(10000), 1229);
+/// assert_eq!(algebra::count_primes(1000000), 78498);
 /// ```
 pub fn count_primes(n: usize) -> usize {
     let block_size = 10000;
