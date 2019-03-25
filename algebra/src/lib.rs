@@ -8,6 +8,8 @@ mod gcd;
 mod linear_diophantine;
 mod fibonacci;
 mod prime;
+mod primality;
+mod factorization;
 
 pub use binary_exponentiation::*;
 pub use geometric_progression::*;
@@ -15,6 +17,8 @@ pub use gcd::*;
 pub use linear_diophantine::*;
 pub use fibonacci::*;
 pub use prime::*;
+pub use primality::*;
+pub use factorization::*;
 
 /// LCM(a, b)
 ///
