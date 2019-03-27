@@ -78,3 +78,26 @@ pub fn gcd_extended(a: i64, b: i64) -> (i64, i64) {
         (y1 - (b / a) * x1, x1)
     }
 }
+
+/// GCD(a, b) Extended
+///
+/// Calculates coefficients (x, y) and gcd g for given (a, b) such that a*x + b*y = g
+/// ```
+/// let b = 25;
+/// let a = 10;
+/// let ((x, y), g) = algebra::gcd_extended1(a, b);
+/// assert_eq!(x * a + y * b, g);
+///
+/// let a = 15;
+/// let b = 16;
+/// let ((x, y), g) = algebra::gcd_extended1(a, b);
+/// assert_eq!(x * a + y * b, g);
+/// ```
+pub fn gcd_extended1(a: i64, b: i64) -> ((i64, i64), i64) {
+    if a == 0 {
+        ((0, 1), b)
+    } else {
+        let ((x1, y1), g) = gcd_extended1(b % a, a);
+        ((y1 - (b / a) * x1, x1), g)
+    }
+}

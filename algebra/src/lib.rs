@@ -10,6 +10,7 @@ mod fibonacci;
 mod prime;
 mod primality;
 mod factorization;
+mod modular_inverse;
 
 pub use binary_exponentiation::*;
 pub use geometric_progression::*;
@@ -19,6 +20,7 @@ pub use fibonacci::*;
 pub use prime::*;
 pub use primality::*;
 pub use factorization::*;
+pub use modular_inverse::*;
 
 /// LCM(a, b)
 ///
