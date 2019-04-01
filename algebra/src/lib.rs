@@ -11,6 +11,7 @@ mod prime;
 mod primality;
 mod factorization;
 mod modular_inverse;
+mod garners_algorithm;
 
 pub use binary_exponentiation::*;
 pub use geometric_progression::*;
@@ -21,6 +22,7 @@ pub use prime::*;
 pub use primality::*;
 pub use factorization::*;
 pub use modular_inverse::*;
+pub use garners_algorithm::*;
 
 /// LCM(a, b)
 ///

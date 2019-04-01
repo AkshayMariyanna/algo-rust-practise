@@ -1,6 +1,6 @@
-use algebra;
+use algebra::GNumber;
+use num::BigInt;
 
 fn main() {
-    algebra::non_deterministic_millerrabin(103);
-    algebra::non_deterministic_millerrabin(561);
+    println!("{}", (&GNumber::new(&BigInt::from(-1000687000001_i64))).to_bigint());
 }
