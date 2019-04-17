@@ -1,9 +1,9 @@
-//! https://cp-algorithms.com/algebra/factorization.html
+//! [Integer Factorization](https://cp-algorithms.com/algebra/factorization.html)
 
 /// Trial Division
 /// ```
-/// assert_eq!(algebra::trial_division(60), vec![2, 2, 3, 5]);
-/// assert_eq!(algebra::trial_division(210), vec![2, 3, 5, 7]);
+/// assert_eq!(algebra::factorization::trial_division(60), vec![2, 2, 3, 5]);
+/// assert_eq!(algebra::factorization::trial_division(210), vec![2, 3, 5, 7]);
 /// ```
 pub fn trial_division(mut n: u64) -> Vec<u64> {
     let mut factorization: Vec<u64> = Vec::new();
@@ -28,8 +28,8 @@ pub fn trial_division(mut n: u64) -> Vec<u64> {
 
 /// Trial Division wheel optimized
 /// ```
-/// assert_eq!(algebra::trial_division_wheel(60), vec![2, 2, 3, 5]);
-/// assert_eq!(algebra::trial_division_wheel(210), vec![2, 3, 5, 7]);
+/// assert_eq!(algebra::factorization::trial_division_wheel(60), vec![2, 2, 3, 5]);
+/// assert_eq!(algebra::factorization::trial_division_wheel(210), vec![2, 3, 5, 7]);
 /// ```
 pub fn trial_division_wheel(mut n: u64) -> Vec<u64> {
     let mut factorization: Vec<u64> = Vec::new();
@@ -65,8 +65,8 @@ pub fn trial_division_wheel(mut n: u64) -> Vec<u64> {
 
 /// Trial Division precomputed primes
 /// ```
-/// assert_eq!(algebra::trial_division_primes_precomputed(35, &[2, 3, 5]), vec![5, 7]);
-/// assert_eq!(algebra::trial_division_primes_precomputed(208, &[2, 3, 5, 7, 11, 13]), vec![2, 2, 2, 2, 13]);
+/// assert_eq!(algebra::factorization::trial_division_primes_precomputed(35, &[2, 3, 5]), vec![5, 7]);
+/// assert_eq!(algebra::factorization::trial_division_primes_precomputed(208, &[2, 3, 5, 7, 11, 13]), vec![2, 2, 2, 2, 13]);
 /// ```
 pub fn trial_division_primes_precomputed(mut n: u64, primes: &[u64]) -> Vec<u64> {
     let mut factorization = Vec::new();
@@ -90,8 +90,8 @@ pub fn trial_division_primes_precomputed(mut n: u64, primes: &[u64]) -> Vec<u64>
 
 /// Fermat's factorization method
 /// ```
-/// assert_eq!(algebra::fermat_factorization(49), 7);
-/// assert_eq!(algebra::fermat_factorization(56), 4);
+/// assert_eq!(algebra::factorization::fermat_factorization(49), 7);
+/// assert_eq!(algebra::factorization::fermat_factorization(56), 4);
 /// ```
 pub fn fermat_factorization(n: u32) -> u32 {
     let mut a: u32 = (n as f64).sqrt().ceil() as u32;

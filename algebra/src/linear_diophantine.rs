@@ -1,3 +1,4 @@
+//! [Linear Diophantine Equations](https://cp-algorithms.com/algebra/linear-diophantine-equation.html)
 pub struct Solution(pub i64, pub i64);
 
 mod helper {
@@ -25,7 +26,7 @@ mod helper {
 /// let b = 6;
 /// let c = 24;
 /// 
-/// if let Some((s, _)) = algebra::find_one_solution(a, b, c) {
+/// if let Some((s, _)) = algebra::linear_diophantine::find_one_solution(a, b, c) {
 ///     assert_eq!(s.0 * a + s.1 * b, c);
 /// } else {
 ///     panic!("This shouldn't be None");
@@ -35,7 +36,7 @@ mod helper {
 /// let b = 6;
 /// let c = 23;
 /// 
-/// if let None = algebra::find_one_solution(a, b, c) {
+/// if let None = algebra::linear_diophantine::find_one_solution(a, b, c) {
 ///     // Do something
 /// } else {
 ///     panic!("This should be None");
@@ -67,7 +68,7 @@ pub fn find_one_solution(a: i64, b: i64, c: i64) -> Option<(Solution, i64)> {
 /// let ymin = -1;
 /// let ymax = 1;
 /// 
-/// assert_eq!(algebra::number_of_solutions(a, b, c, xmin, xmax, ymin, ymax), 2);
+/// assert_eq!(algebra::linear_diophantine::number_of_solutions(a, b, c, xmin, xmax, ymin, ymax), 2);
 /// ```
 pub fn number_of_solutions(a: i64, b: i64, c: i64, xmin: i64, xmax: i64, ymin: i64, ymax: i64) -> i64 {
     match find_one_solution(a, b, c) {

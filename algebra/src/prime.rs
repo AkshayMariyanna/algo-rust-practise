@@ -1,14 +1,13 @@
-//! Sieve of Eratosthenes
-//! https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html
-//! https://cp-algorithms.com/algebra/prime-sieve-linear.html
+//! [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html)
+//! [Linear Sieve](https://cp-algorithms.com/algebra/prime-sieve-linear.html)
 
 use std::cmp;
 
 /// Block Sieving
 /// Returns count of retime numbers less than n
 /// ```
-/// assert_eq!(algebra::count_primes(100), 25);
-/// assert_eq!(algebra::count_primes(1000000), 78498);
+/// assert_eq!(algebra::prime::count_primes(100), 25);
+/// assert_eq!(algebra::prime::count_primes(1000000), 78498);
 /// ```
 pub fn count_primes(n: usize) -> usize {
     let block_size = 10000;
@@ -58,14 +57,14 @@ pub fn count_primes(n: usize) -> usize {
     count
 }
 
-/// Finds Retimes less than n in O(n)
-/// Returns vector of retime numbers
+/// Finds primes less than n in O(n)
+/// Returns vector of prime numbers
 /// ```
 /// let n = 1000000;
-/// assert_eq!(algebra::primes(n).len(), algebra::count_primes(n));
-/// assert_eq!(algebra::primes(n).len(), 78498);
+/// assert_eq!(algebra::prime::primes(n).len(), algebra::prime::count_primes(n));
+/// assert_eq!(algebra::prime::primes(n).len(), 78498);
 /// ```
-/// https://primes.utm.edu/howmany.html
+/// [Phi function values](https://primes.utm.edu/howmany.html)
 pub fn primes(n: usize) -> Vec<usize> {
     let mut lp: Vec<usize> = vec![0; n + 1];
     let mut ret: Vec<usize>= Vec::new();

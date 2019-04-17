@@ -1,8 +1,9 @@
+//! [Chinese Remainder Theorem](https://cp-algorithms.com/algebra/chinese-remainder-theorem.html)
 use num::{BigInt, Zero, One, cast::ToPrimitive};
 use std::ops::{Add, Sub, Mul};
 
 use crate::primality::deterministic_millerrabin;
-use crate::modular_inverse_extended_gcd;
+use crate::modular_inverse::modular_inverse_extended_gcd;
 
 const SZ: usize = 100;
 

@@ -1,3 +1,4 @@
+//! [Geometric Progression](https://cp-algorithms.com/algebra/binary-exp.html)
 /// Calculates GP - a^1 + a^2 + ... + a^n
 ///
 /// O(log2(n))
@@ -6,7 +7,7 @@
 /// let a = 4;
 /// let n = 3;
 ///
-/// assert_eq!(algebra::geometric_progression(a, n), 84);
+/// assert_eq!(algebra::geometric_progression::geometric_progression(a, n), 84);
 /// ```
 pub fn geometric_progression(mut a: u64, mut n: u64) -> u64 {
     let mut gp = 0;
@@ -33,7 +34,7 @@ pub fn geometric_progression(mut a: u64, mut n: u64) -> u64 {
 /// let n = 3;
 /// let m = 17;
 ///
-/// assert_eq!(algebra::geometric_progression_mod(a, n, m), 16);
+/// assert_eq!(algebra::geometric_progression::geometric_progression_mod(a, n, m), 16);
 /// ```
 pub fn geometric_progression_mod(mut a: u64, mut n: u64, m: u64) -> u64 {
     a = a % m;

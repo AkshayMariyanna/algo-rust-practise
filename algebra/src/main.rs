@@ -1,4 +1,4 @@
-use algebra::GNumber;
+use algebra::garners_algorithm::GNumber;
 use num::BigInt;
 
 fn main() {

@@ -1,3 +1,4 @@
+//! [Euclidean Algorithm](https://cp-algorithms.com/algebra/euclid-algorithm.html)
 /// GCD(a, b)
 ///
 /// [CP - Algos](https://cp-algorithms.com/algebra/euclid-algorithm.html)
@@ -10,11 +11,11 @@
 /// ```
 /// let a = 25;
 /// let b = 10;
-/// assert_eq!(algebra::gcd(a, b), 5);
+/// assert_eq!(algebra::gcd::gcd(a, b), 5);
 ///
 /// let a = 15;
 /// let b = 16;
-/// assert_eq!(algebra::gcd(a, b), 1);
+/// assert_eq!(algebra::gcd::gcd(a, b), 1);
 /// ```
 pub fn gcd(a: u64, b: u64) -> u64 {
     match b {
@@ -35,11 +36,11 @@ pub fn gcd(a: u64, b: u64) -> u64 {
 /// ```
 /// let a = 25;
 /// let b = 10;
-/// assert_eq!(algebra::gcd_non_recursive(a, b), 5);
+/// assert_eq!(algebra::gcd::gcd_non_recursive(a, b), 5);
 ///
 /// let a = 15;
 /// let b = 16;
-/// assert_eq!(algebra::gcd_non_recursive(a, b), 1);
+/// assert_eq!(algebra::gcd::gcd_non_recursive(a, b), 1);
 /// ```
 pub fn gcd_non_recursive(mut a: u64, mut b: u64) -> u64 {
     while b != 0 {
@@ -62,12 +63,12 @@ pub fn gcd_non_recursive(mut a: u64, mut b: u64) -> u64 {
 /// ```
 /// let b = 25;
 /// let a = 10;
-/// let (x, y) = algebra::gcd_extended(a, b);
+/// let (x, y) = algebra::gcd::gcd_extended(a, b);
 /// assert_eq!(x * a + y * b, 5);
 ///
 /// let a = 15;
 /// let b = 16;
-/// let (x, y) = algebra::gcd_extended(a, b);
+/// let (x, y) = algebra::gcd::gcd_extended(a, b);
 /// assert_eq!(x * a + y * b, 1);
 /// ```
 pub fn gcd_extended(a: i64, b: i64) -> (i64, i64) {
@@ -85,12 +86,12 @@ pub fn gcd_extended(a: i64, b: i64) -> (i64, i64) {
 /// ```
 /// let b = 25;
 /// let a = 10;
-/// let ((x, y), g) = algebra::gcd_extended1(a, b);
+/// let ((x, y), g) = algebra::gcd::gcd_extended1(a, b);
 /// assert_eq!(x * a + y * b, g);
 ///
 /// let a = 15;
 /// let b = 16;
-/// let ((x, y), g) = algebra::gcd_extended1(a, b);
+/// let ((x, y), g) = algebra::gcd::gcd_extended1(a, b);
 /// assert_eq!(x * a + y * b, g);
 /// ```
 pub fn gcd_extended1(a: i64, b: i64) -> ((i64, i64), i64) {

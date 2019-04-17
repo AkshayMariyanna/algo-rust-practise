@@ -1,4 +1,4 @@
-//! https://cp-algorithms.com/algebra/primality_tests.html
+//! [Primality Tests](https://cp-algorithms.com/algebra/primality_tests.html)
 
 use rand::{thread_rng, RngCore};
 
@@ -6,8 +6,8 @@ use crate::binary_exponentiation::binary_exponentiation_mod;
 
 /// Trial Division
 /// ```
-/// assert_eq!(algebra::is_prime(13), true);
-/// assert_eq!(algebra::is_prime(77), false);
+/// assert_eq!(algebra::primality::is_prime(13), true);
+/// assert_eq!(algebra::primality::is_prime(77), false);
 /// ```
 pub fn is_prime(x: i64) -> bool {
     for d in 2..x {
@@ -23,8 +23,8 @@ pub fn is_prime(x: i64) -> bool {
 
 /// Fermat Primality Test
 /// ```
-/// assert_eq!(algebra::probably_prime_fermat(103, 5), true);
-/// assert_eq!(algebra::probably_prime_fermat(561, 558), false); // Carmichael number
+/// assert_eq!(algebra::primality::probably_prime_fermat(103, 5), true);
+/// assert_eq!(algebra::primality::probably_prime_fermat(561, 558), false); // Carmichael number
 /// ```
 pub fn probably_prime_fermat(n: u64, iter: u64) -> bool {
     if n < 4 {
@@ -59,8 +59,8 @@ fn check_composite(n: u64, a: u64, d: u64, s: i32) -> bool {
 
 /// Miller Rabin Primality Test
 /// ```
-/// assert_eq!(algebra::non_deterministic_millerrabin(103), true);
-/// assert_eq!(algebra::non_deterministic_millerrabin(561), false); // Miller Rabin doesnt have numbers like Carmichael numbers
+/// assert_eq!(algebra::primality::non_deterministic_millerrabin(103), true);
+/// assert_eq!(algebra::primality::non_deterministic_millerrabin(561), false); // Miller Rabin doesnt have numbers like Carmichael numbers
 /// ```
 pub fn non_deterministic_millerrabin(n: u64) -> bool {
     const ITER: u32 = 5;
@@ -87,8 +87,8 @@ pub fn non_deterministic_millerrabin(n: u64) -> bool {
 
 /// Miller Rabin Primality Test deterministic for 64bit integers
 /// ```
-/// assert_eq!(algebra::non_deterministic_millerrabin(103), true);
-/// assert_eq!(algebra::non_deterministic_millerrabin(561), false); // Miller Rabin doesnt have numbers like Carmichael numbers
+/// assert_eq!(algebra::primality::non_deterministic_millerrabin(103), true);
+/// assert_eq!(algebra::primality::non_deterministic_millerrabin(561), false); // Miller Rabin doesnt have numbers like Carmichael numbers
 /// ```
 pub fn deterministic_millerrabin(n: u64) -> bool {
     if n < 4 {

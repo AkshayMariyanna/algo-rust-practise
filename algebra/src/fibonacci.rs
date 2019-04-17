@@ -1,10 +1,10 @@
-//! https://cp-algorithms.com/algebra/fibonacci-numbers.html
+//! [Fibonacci](https://cp-algorithms.com/algebra/fibonacci-numbers.html)
 
 /// Fast Doubling method
 /// Caclulates fib(n) in O(log n)
 /// ```
 /// let n = 4;
-/// let (n4, n5) = algebra::fibonacci(n);
+/// let (n4, n5) = algebra::fibonacci::fibonacci(n);
 /// assert_eq!(n4, 3);
 /// assert_eq!(n5, 5);
 /// ```
